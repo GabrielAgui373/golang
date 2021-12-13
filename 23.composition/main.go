@@ -48,14 +48,24 @@ type game2 struct {
 }
 
 func (t game2) sell() {
-	fmt.Println("--------------------------------------")
+	fmt.Println("\n\n--------------------------------------")
 	fmt.Println("Name:", t.name)
 	fmt.Println("Price:", t.price)
 	fmt.Println("--------------------------------------")
 }
 
 func (t game2) show() {
-	
+	fmt.Println("The Games available are: ")
+	for _, name := range t.gameCollection {
+		fmt.Println(name)
+	}
+	fmt.Println("--------------------------------------")
+}
+
+func shop(s salesman) {
+	fmt.Println(s)
+	s.sell()
+	s.show()
 }
 
 func main() {
@@ -72,5 +82,9 @@ func main() {
 	}
 
 	newGame.show()
+
+	collection := []string{"XYZ", "Trial by Code", "Sea of Rubies"}
+	game1 := game2{name: "ABC", price: "$125", gameCollection: collection}
+	shop(game1)
 
 }
