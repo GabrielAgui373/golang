@@ -55,6 +55,4 @@ func main() {
 	json.Unmarshal([]byte(jsonClient), &client3)
 	fmt.Println(client3)
 
-
-
 }
