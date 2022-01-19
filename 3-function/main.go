@@ -29,7 +29,7 @@ func main() {
 
 	//Função Anônima
 	square := func(l int) int {
-		return l*l
+		return l * l
 	}
 	fmt.Println(square(2))
 }
