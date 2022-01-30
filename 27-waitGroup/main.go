@@ -31,6 +31,8 @@ func exec() {
 	wg.Wait()
 }
 
+//Usar waitGroup quando não estiver trabalhando com channels
+
 func main() {
 	exec()
 }
